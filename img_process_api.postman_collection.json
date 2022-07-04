@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "28a9bad4-ec96-48c5-a7f4-08caf393515f",
+		"name": "img-process-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Successful response API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/images?filename=encenadaport&width=300&height=300",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"images"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "encenadaport"
+						},
+						{
+							"key": "width",
+							"value": "300"
+						},
+						{
+							"key": "height",
+							"value": "300"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wrong filename API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/images?filename=wrongFileName&width=300&height=300",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"images"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "wrongFileName"
+						},
+						{
+							"key": "width",
+							"value": "300"
+						},
+						{
+							"key": "height",
+							"value": "300"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid parameters API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/images?filename=invalidParameters",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"images"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "invalidParameters"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
