@@ -17,10 +17,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
-    "jasmine": "^4.2.1",
-    "jasmine-spec-reporter": "^7.0.0",
-    "sharp": "^0.30.7",
-    "supertest": "^6.2.4"
+    "sharp": "^0.30.7"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.2",
@@ -34,8 +31,11 @@
     "eslint": "^8.19.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "jasmine": "^4.2.1",
+    "jasmine-spec-reporter": "^7.0.0",
     "nodemon": "^2.0.18",
     "prettier": "^2.7.1",
+    "supertest": "^6.2.4",
     "ts-node": "^10.8.1",
     "typescript": "^4.7.4"
   }
