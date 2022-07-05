@@ -1,7 +1,7 @@
 import express from 'express';
-import sharp from 'sharp';
 import path from 'path';
 import { promises as fs } from 'fs';
+import imageProcessor from '../utils/imageProcessor';
 import { setCache } from '../middlewares/cache';
 
 export default {
@@ -50,12 +50,14 @@ export default {
 
     // !NOTE: Processes the image
     try {
-      resizedImage = await sharp(`${oldFilePath}/${fileName}`)
-        .resize({ height, width })
-        .toBuffer();
+      resizedImage = await imageProcessor(
+        `${oldFilePath}/${fileName}`,
+        height,
+        width
+      );
     } catch (e) {
       console.log(e);
-      return res.status(500).send({ message: 'internal server error' });
+      return res.status(500).send({ message: 'failed to process image' });
     }
 
     console.log('successfully processed image');

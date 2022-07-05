@@ -15,7 +15,7 @@ export function getCache(
   req: express.Request,
   res: express.Response,
   next: express.NextFunction
-) {
+): express.Response | void {
   const key: string =
     req.query.filename + '_' + req.query.height + '_' + req.query.width;
 
