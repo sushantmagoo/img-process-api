@@ -8,7 +8,10 @@ export default {
   /**
    * @description Image Controller
    */
-  async process(req: express.Request, res: express.Response) {
+  async process(
+    req: express.Request,
+    res: express.Response
+  ): Promise<express.Response> {
     const oldFilePath = path.join(
       __dirname,
       '..',
